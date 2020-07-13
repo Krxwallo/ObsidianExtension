@@ -1,3 +1,14 @@
+Obsidian Extension - Minecraft Mod
+----------------------------------
+
+Author: justAm0dd3r
+Link: https://www.curseforge.com/minecraft/mc-mods/obsidian-extension
+Mod ID: obsidian_extension
+Curseforge Mod Slug: obsidian-extension
+
+================================================================
+Everything below this line is the default README.txt from forge:
+
 -------------------------------------------
 Source installation information for modders
 -------------------------------------------
