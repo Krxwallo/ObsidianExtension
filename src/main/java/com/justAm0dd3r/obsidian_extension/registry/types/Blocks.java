@@ -2,9 +2,7 @@ package com.justAm0dd3r.obsidian_extension.registry.types;
 
 import com.justAm0dd3r.obsidian_extension.objects.block_items.BlockItemBase;
 import com.justAm0dd3r.obsidian_extension.reference.Reference;
-import net.minecraft.block.Block;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -32,4 +30,11 @@ public class Blocks {
     public static final RegistryObject<Item> CRYING_OBSIDIAN_SLAB_ITEM = ITEMS.register("crying_obsidian_slab", () -> new BlockItemBase(CRYING_OBSIDIAN_SLAB.get()));
     public static final RegistryObject<Block> CRYING_OBSIDIAN_STAIRS= BLOCKS.register("crying_obsidian_stairs", () -> new StairsBlock(field_235399_ni_::getDefaultState, Block.Properties.from(field_235399_ni_).harvestLevel(3)));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_STAIRS_ITEM = ITEMS.register("crying_obsidian_stairs", () -> new BlockItemBase(CRYING_OBSIDIAN_STAIRS.get()));
+
+    // Buttons
+    public static final RegistryObject<Block> OBSIDIAN_BUTTON = BLOCKS.register("obsidian_button", () -> new StoneButtonBlock(AbstractBlock.Properties.from(OBSIDIAN)));
+    public static final RegistryObject<Item> OBSIDIAN_BUTTON_ITEM = ITEMS.register("obsidian_button", () -> new BlockItemBase(OBSIDIAN_BUTTON.get()));
+
+    public static final RegistryObject<Block> CRYING_OBSIDIAN_BUTTON = BLOCKS.register("crying_obsidian_button", () -> new StoneButtonBlock(AbstractBlock.Properties.from(field_235399_ni_)));
+    public static final RegistryObject<Item> CRYING_OBSIDIAN_BUTTON_ITEM = ITEMS.register("crying_obsidian_button", () -> new BlockItemBase(CRYING_OBSIDIAN_BUTTON.get()));
 }
