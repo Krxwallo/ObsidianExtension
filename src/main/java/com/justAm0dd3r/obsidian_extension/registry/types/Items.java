@@ -6,6 +6,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+/**
+ * Author: justAm0dd3r
+ */
 public class Items {
     public static void init() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());

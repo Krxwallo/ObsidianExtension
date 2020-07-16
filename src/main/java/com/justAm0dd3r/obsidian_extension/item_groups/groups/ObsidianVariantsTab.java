@@ -6,6 +6,9 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+/**
+ * Author: justAm0dd3r
+ */
 public class ObsidianVariantsTab extends ItemGroup {
     public ObsidianVariantsTab() {
         super("obsidian_variants");

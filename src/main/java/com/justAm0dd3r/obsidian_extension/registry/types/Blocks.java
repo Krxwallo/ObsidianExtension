@@ -13,6 +13,9 @@ import static com.justAm0dd3r.obsidian_extension.registry.types.Items.ITEMS;
 import static net.minecraft.block.Blocks.OBSIDIAN;
 import static net.minecraft.block.Blocks.field_235399_ni_; // Crying Obsidian
 
+/**
+ * Author: justAm0dd3r
+ */
 @SuppressWarnings("unused")
 public class Blocks {
     public static void init() {
@@ -37,4 +40,11 @@ public class Blocks {
 
     public static final RegistryObject<Block> CRYING_OBSIDIAN_BUTTON = BLOCKS.register("crying_obsidian_button", () -> new StoneButtonBlock(AbstractBlock.Properties.from(field_235399_ni_)));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_BUTTON_ITEM = ITEMS.register("crying_obsidian_button", () -> new BlockItemBase(CRYING_OBSIDIAN_BUTTON.get()));
+
+    // Walls
+    public static final RegistryObject<Block> OBSIDIAN_WALL = BLOCKS.register("obsidian_wall", () -> new WallBlock(AbstractBlock.Properties.from(OBSIDIAN)));
+    public static final RegistryObject<Item> OBSIDIAN_WALL_ITEM = ITEMS.register("obsidian_wall", () -> new BlockItemBase(OBSIDIAN_WALL.get()));
+
+    public static final RegistryObject<Block> CRYING_OBSIDIAN_WALL = BLOCKS.register("crying_obsidian_wall", () -> new WallBlock(AbstractBlock.Properties.from(field_235399_ni_)));
+    public static final RegistryObject<Item> CRYING_OBSIDIAN_WALL_ITEM = ITEMS.register("crying_obsidian_wall", () -> new BlockItemBase(CRYING_OBSIDIAN_WALL.get()));
 }

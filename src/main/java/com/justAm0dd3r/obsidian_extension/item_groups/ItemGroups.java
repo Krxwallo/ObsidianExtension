@@ -5,6 +5,9 @@ import com.justAm0dd3r.obsidian_extension.item_groups.groups.ObsidianVariantsTab
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 
+/**
+ * Author: justAm0dd3r
+ */
 public class ItemGroups {
     public static final ObsidianVariantsTab OBSIDIAN_VARIANTS_TAB = new ObsidianVariantsTab();
     public static final CryingObsidianVariantsTab CRYING_OBSIDIAN_VARIANTS_TAB = new CryingObsidianVariantsTab();

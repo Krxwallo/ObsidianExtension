@@ -6,6 +6,9 @@ import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Author: justAm0dd3r
+ */
 @Mod(Reference.MOD_ID)
 public class ObsidianExtension
 {

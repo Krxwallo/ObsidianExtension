@@ -6,6 +6,9 @@ import net.minecraft.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
+/**
+ * Author: justAm0dd3r
+ */
 public class CryingObsidianVariantsTab extends ItemGroup {
     public CryingObsidianVariantsTab() {
         super("crying_obsidian_variants");

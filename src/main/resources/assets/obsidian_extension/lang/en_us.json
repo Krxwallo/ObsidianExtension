@@ -9,5 +9,11 @@
   "block.obsidian_extension.crying_obsidian_slab": "Crying Obsidian Slab",
 
   "block.obsidian_extension.obsidian_button": "Obsidian Button",
-  "block.obsidian_extension.crying_obsidian_button": "Crying Obsidian Button"
+  "block.obsidian_extension.crying_obsidian_button": "Crying Obsidian Button",
+
+  "block.obsidian_extension.obsidian_wall": "Obsidian Wall",
+  "block.obsidian_extension.crying_obsidian_wall": "Crying Obsidian Wall",
+
+  "block.obsidian_extension.obsidian_door": "Obsidian Door",
+  "block.obsidian_extension.crying_obsidian_door": "Crying Obsidian Door"
 }
