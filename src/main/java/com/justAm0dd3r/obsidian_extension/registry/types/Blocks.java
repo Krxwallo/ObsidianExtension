@@ -12,7 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import static com.justAm0dd3r.obsidian_extension.registry.types.Items.ITEMS;
-import static net.minecraft.block.Blocks.*;
+import static net.minecraft.block.Blocks.*; // field_235399_ni_ equals CRYING_OBSIDIAN
 
 /**
  * Author: justAm0dd3r
@@ -53,4 +53,8 @@ public class Blocks {
     public static final RegistryObject<Block> OBSIDIAN_DOOR = BLOCKS.register("obsidian_door", () -> new DoorBlock(AbstractBlock.Properties.from(OBSIDIAN).func_235861_h_().notSolid()));
     public static final RegistryObject<Item> OBSIDIAN_DOOR_ITEM = ITEMS.register("obsidian_door", () -> new TallBlockItem(OBSIDIAN_DOOR.get(),
             new Item.Properties().group(ItemGroups.OBSIDIAN_VARIANTS_TAB)));
+
+    public static final RegistryObject<Block> CRYING_OBSIDIAN_DOOR = BLOCKS.register("crying_obsidian_door", () -> new DoorBlock(AbstractBlock.Properties.from(field_235399_ni_).func_235861_h_().notSolid()));
+    public static final RegistryObject<Item> CRYING_OBSIDIAN_DOOR_ITEM = ITEMS.register("crying_obsidian_door", () -> new TallBlockItem(CRYING_OBSIDIAN_DOOR.get(),
+            new Item.Properties().group(ItemGroups.CRYING_OBSIDIAN_VARIANTS_TAB)));
 }
