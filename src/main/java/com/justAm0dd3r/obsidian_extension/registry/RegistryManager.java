@@ -7,7 +7,7 @@ import com.justAm0dd3r.obsidian_extension.registry.types.Items;
  * Author: justAm0dd3r
  */
 public class RegistryManager {
-    public static void init() {
+    public static void registerAll() {
         Blocks.init();
         Items.init();
     }
