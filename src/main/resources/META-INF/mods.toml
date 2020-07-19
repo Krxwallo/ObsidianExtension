@@ -2,11 +2,11 @@ modLoader="javafml"
 loaderVersion="[32,)"
 issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/obsidian_extension/issues"
 [[mods]]
-    modId="obsidian_extension" #mandatory
-    version="${file.jarVersion}" #mandatory
-    displayName="Obsidian Extension" #mandatory
+    modId="obsidian_extension"
+    version="${file.jarVersion}"
+    displayName="Obsidian Extension"
     #updateJSONURL="http://myurl.me/" #optional
-    #displayURL="http://example.com/" #optional
+    displayURL="https://www.curseforge.com/minecraft/mc-mods/obsidian_extension"
     logoFile="obsidian_extension.png" #optional
     #credits="Thanks for this example mod goes to Java" #optional
     authors="justAm0dd3r"

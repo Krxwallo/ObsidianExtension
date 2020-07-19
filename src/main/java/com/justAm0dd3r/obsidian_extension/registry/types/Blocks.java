@@ -1,17 +1,18 @@
 package com.justAm0dd3r.obsidian_extension.registry.types;
 
+import com.justAm0dd3r.obsidian_extension.item_groups.ItemGroups;
 import com.justAm0dd3r.obsidian_extension.objects.block_items.BlockItemBase;
 import com.justAm0dd3r.obsidian_extension.reference.Reference;
 import net.minecraft.block.*;
 import net.minecraft.item.Item;
+import net.minecraft.item.TallBlockItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import static com.justAm0dd3r.obsidian_extension.registry.types.Items.ITEMS;
-import static net.minecraft.block.Blocks.OBSIDIAN;
-import static net.minecraft.block.Blocks.field_235399_ni_; // Crying Obsidian
+import static net.minecraft.block.Blocks.*;
 
 /**
  * Author: justAm0dd3r
@@ -47,4 +48,9 @@ public class Blocks {
 
     public static final RegistryObject<Block> CRYING_OBSIDIAN_WALL = BLOCKS.register("crying_obsidian_wall", () -> new WallBlock(AbstractBlock.Properties.from(field_235399_ni_)));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_WALL_ITEM = ITEMS.register("crying_obsidian_wall", () -> new BlockItemBase(CRYING_OBSIDIAN_WALL.get()));
+
+    // Doors
+    public static final RegistryObject<Block> OBSIDIAN_DOOR = BLOCKS.register("obsidian_door", () -> new DoorBlock(AbstractBlock.Properties.from(OBSIDIAN).func_235861_h_().notSolid()));
+    public static final RegistryObject<Item> OBSIDIAN_DOOR_ITEM = ITEMS.register("obsidian_door", () -> new TallBlockItem(OBSIDIAN_DOOR.get(),
+            new Item.Properties().group(ItemGroups.OBSIDIAN_VARIANTS_TAB)));
 }
