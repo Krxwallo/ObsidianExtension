@@ -1,3 +1,8 @@
+Build 2020-07-19 13:47 obsidian_extension-1.16.1-1.3.0
+======================================================
+- Added crying obsidian and obsidian doors
+
+
 Build 2020-07-16 13:04 obsidian_extension-1.16.1-1.2.0
 ======================================================
 - Added recipes for the obsidian buttons
