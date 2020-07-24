@@ -4,20 +4,22 @@ import com.justAm0dd3r.obsidian_extension.reference.Reference;
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
+/**
+ * Author: justAm0dd3r
+ */
 public class Config {
-
     public static class Common {
 
-        public final ForgeConfigSpec.BooleanValue enableArmour;
+        public final ForgeConfigSpec.BooleanValue enableArmor;
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.comment("Obsidian Extension Mod Configurations")
                    .push(Reference.MOD_ID);
 
-            enableArmour = builder
-                    .comment("Enable obsidian and crying obsidian armour? (default: true)")
+            enableArmor = builder
+                    .comment("Enable obsidian and crying obsidian armor? (default: true)")
                     .worldRestart()
-                    .define("enable_armour", true);
+                    .define("enable_armor", true);
 
             builder.pop();
         }

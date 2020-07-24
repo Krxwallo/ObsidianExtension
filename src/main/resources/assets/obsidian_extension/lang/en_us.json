@@ -15,5 +15,10 @@
   "block.obsidian_extension.crying_obsidian_wall": "Crying Obsidian Wall",
 
   "block.obsidian_extension.obsidian_door": "Obsidian Door",
-  "block.obsidian_extension.crying_obsidian_door": "Crying Obsidian Door"
+  "block.obsidian_extension.crying_obsidian_door": "Crying Obsidian Door",
+
+  "item.obsidian_extension.obsidian_helmet": "Obsidian Helmet",
+  "item.obsidian_extension.obsidian_chestplate": "Obsidian Chestplate",
+  "item.obsidian_extension.obsidian_leggings": "Obsidian Leggings",
+  "item.obsidian_extension.obsidian_boots": "Obsidian Shoes"
 }
