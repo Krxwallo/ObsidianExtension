@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "obsidian:item/obsidian_boots"
+    "layer0": "obsidian_extension:item/obsidian_boots"
   }
 }

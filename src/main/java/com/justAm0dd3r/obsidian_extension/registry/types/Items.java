@@ -5,8 +5,7 @@ import com.justAm0dd3r.obsidian_extension.config.Config;
 import com.justAm0dd3r.obsidian_extension.item_groups.ItemGroups;
 import com.justAm0dd3r.obsidian_extension.reference.Reference;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
+import com.justAm0dd3r.obsidian_extension.objects.items.ObsidianArmorItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -24,20 +23,20 @@ public class Items {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Reference.MOD_ID);
 
-    // Armour
+    // Armor
     public static RegistryObject<Item> OBSIDIAN_CHESTPLATE = null;
     public static RegistryObject<Item> OBSIDIAN_HELMET = null;
     public static RegistryObject<Item> OBSIDIAN_BOOTS = null;
     public static RegistryObject<Item> OBSIDIAN_LEGGINGS = null;
     static {
         if (Config.COMMON.enableArmor.get()) {
-            OBSIDIAN_CHESTPLATE = ITEMS.register("obsidian_chestplate", () -> new ArmorItem(
+            OBSIDIAN_CHESTPLATE = ITEMS.register("obsidian_chestplate", () -> new ObsidianArmorItem(
                     ArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroups.OBSIDIAN_VARIANTS_TAB)));
-            OBSIDIAN_HELMET = ITEMS.register("obsidian_helmet", () -> new ArmorItem(
+            OBSIDIAN_HELMET = ITEMS.register("obsidian_helmet", () -> new ObsidianArmorItem(
                     ArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroups.OBSIDIAN_VARIANTS_TAB)));
-            OBSIDIAN_LEGGINGS = ITEMS.register("obsidian_leggings", () -> new ArmorItem(
+            OBSIDIAN_LEGGINGS = ITEMS.register("obsidian_leggings", () -> new ObsidianArmorItem(
                     ArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroups.OBSIDIAN_VARIANTS_TAB)));
-            OBSIDIAN_BOOTS = ITEMS.register("obsidian_boots", () -> new ArmorItem(
+            OBSIDIAN_BOOTS = ITEMS.register("obsidian_boots", () -> new ObsidianArmorItem(
                     ArmorMaterials.OBSIDIAN_ARMOR_MATERIAL, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroups.OBSIDIAN_VARIANTS_TAB)));
         }
     }

@@ -1,8 +1,10 @@
 package com.justAm0dd3r.obsidian_extension;
 
 import com.justAm0dd3r.obsidian_extension.config.Config;
+import com.justAm0dd3r.obsidian_extension.events.Events;
 import com.justAm0dd3r.obsidian_extension.reference.Reference;
 import com.justAm0dd3r.obsidian_extension.registry.RegistryManager;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;

@@ -1,22 +1,30 @@
 package com.justAm0dd3r.obsidian_extension.events;
 
-import com.justAm0dd3r.obsidian_extension.armor_materials.ObsidianArmorMaterial;
 import com.justAm0dd3r.obsidian_extension.registry.types.Items;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Mod.EventBusSubscriber
 public class Events {
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    @SubscribeEvent
+    public static void onEntityPickupEvent(EntityItemPickupEvent event) {
+        LOGGER.debug("onEntityPickupEvent called.");
+    }
 
     @SubscribeEvent
     public static void enchantSaturationFunction(LivingEquipmentChangeEvent event) {
+        LOGGER.debug("enchantSaturationFunction() called.");
+
         EquipmentSlotType slotChanged = event.getSlot();
         if (slotChanged.getSlotIndex() > 0 && slotChanged.getSlotIndex() < 5) {
             ItemStack previousArmorPiece = event.getFrom();
