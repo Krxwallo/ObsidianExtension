@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.4.0'
+version = '1.5.0'
 group = 'com.justAm0dd3r.obsidian_extension' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 //noinspection GroovyUnusedAssignment
 archivesBaseName = 'obsidian_extension-1.16.1'
@@ -107,7 +107,6 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.1-32.0.47'
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.1:7.0.0.6")
-    runtimeOnly 'cheat-mode:cheat_mode:1.16.1:1.1.0'
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
