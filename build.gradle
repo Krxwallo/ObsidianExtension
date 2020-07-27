@@ -92,10 +92,22 @@ repositories {
         name = "Curseforge"
         url = "https://minecraft.curseforge.com/api/maven/"
     }
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "http://dvs1.progwml6.com/files/maven"
+    }
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "modmaven.k-4u.nl"
+    }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.1-32.0.47'
+    runtimeOnly fg.deobf("mezz.jei:jei-1.16.1:7.0.0.6")
+    runtimeOnly 'cheat-mode:cheat_mode:1.16.1:1.1.0'
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

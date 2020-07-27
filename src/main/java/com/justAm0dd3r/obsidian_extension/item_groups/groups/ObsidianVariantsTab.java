@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
  */
 public class ObsidianVariantsTab extends ItemGroup {
     public ObsidianVariantsTab() {
-        super("obsidian_variants");
+        super("obsidian_stuff");
     }
 
     @Nonnull
