@@ -89,8 +89,8 @@ minecraft {
 
 repositories {
     maven {
-        name = "Curseforge"
-        url = "https://minecraft.curseforge.com/api/maven/"
+        name = "justAm0dd3r Maven"
+        url = "https://lookonthebrightsi.de/mc-mods/files/maven/"
     }
     maven {
         // location of the maven that hosts JEI files
@@ -107,6 +107,8 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.1-32.0.47'
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.1:7.0.0.6")
+    compile fg.deobf("justAm0dd3r.filters-reborn:filters_reborn-1.16.1:1.0.0")
+    compile fg.deobf("justAm0dd3r.cheat-mode:cheat_mode-1.16.1:1.1.0")
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

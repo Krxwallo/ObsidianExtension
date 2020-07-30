@@ -1,4 +1,4 @@
-package com.justAm0dd3r.obsidian_extension.armor_materials;
+package com.justAm0dd3r.obsidian_extension.objects.armor_materials;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;

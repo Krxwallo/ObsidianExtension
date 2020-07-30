@@ -1,4 +1,4 @@
-package com.justAm0dd3r.obsidian_extension.item_groups.groups;
+package com.justAm0dd3r.obsidian_extension.objects.item_groups.groups;
 
 import com.justAm0dd3r.obsidian_extension.registry.types.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -9,8 +9,8 @@ import javax.annotation.Nonnull;
 /**
  * Author: justAm0dd3r
  */
-public class ObsidianVariantsTab extends ItemGroup {
-    public ObsidianVariantsTab() {
+public class ObsidianStuffTab extends ItemGroup {
+    public ObsidianStuffTab() {
         super("obsidian_stuff");
     }
 

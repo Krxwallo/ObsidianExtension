@@ -1,6 +1,6 @@
 package com.justAm0dd3r.obsidian_extension.registry.types;
 
-import com.justAm0dd3r.obsidian_extension.item_groups.ItemGroups;
+import com.justAm0dd3r.obsidian_extension.objects.item_groups.ItemGroups;
 import com.justAm0dd3r.obsidian_extension.objects.block_items.BlockItemBase;
 import com.justAm0dd3r.obsidian_extension.reference.Reference;
 import net.minecraft.block.*;
@@ -32,6 +32,7 @@ public class Blocks {
     public static final RegistryObject<Item> OBSIDIAN_SLAB_ITEM = ITEMS.register("obsidian_slab", () -> new BlockItemBase(OBSIDIAN_SLAB.get()));
     public static final RegistryObject<Block> OBSIDIAN_STAIRS= BLOCKS.register("obsidian_stairs", () -> new StairsBlock(OBSIDIAN::getDefaultState, Block.Properties.from(OBSIDIAN).harvestLevel(4)));
     public static final RegistryObject<Item> OBSIDIAN_STAIRS_ITEM = ITEMS.register("obsidian_stairs", () -> new BlockItemBase(OBSIDIAN_STAIRS.get()));
+
     public static final RegistryObject<Block> CRYING_OBSIDIAN_SLAB= BLOCKS.register("crying_obsidian_slab", () -> new SlabBlock(Block.Properties.from(CRYING_OBSIDIAN).harvestLevel(3)));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_SLAB_ITEM = ITEMS.register("crying_obsidian_slab", () -> new BlockItemBase(CRYING_OBSIDIAN_SLAB.get()));
     public static final RegistryObject<Block> CRYING_OBSIDIAN_STAIRS= BLOCKS.register("crying_obsidian_stairs", () -> new StairsBlock(CRYING_OBSIDIAN::getDefaultState, Block.Properties.from(CRYING_OBSIDIAN).harvestLevel(3)));
@@ -54,11 +55,11 @@ public class Blocks {
     // Doors
     public static final RegistryObject<Block> OBSIDIAN_DOOR = BLOCKS.register("obsidian_door", () -> new DoorBlock(AbstractBlock.Properties.from(OBSIDIAN).func_235861_h_().notSolid()));
     public static final RegistryObject<Item> OBSIDIAN_DOOR_ITEM = ITEMS.register("obsidian_door", () -> new TallBlockItem(OBSIDIAN_DOOR.get(),
-            new Item.Properties().group(ItemGroups.OBSIDIAN_VARIANTS_TAB)));
+            new Item.Properties().group(ItemGroups.getFromBlock(OBSIDIAN))));
 
     public static final RegistryObject<Block> CRYING_OBSIDIAN_DOOR = BLOCKS.register("crying_obsidian_door", () -> new DoorBlock(AbstractBlock.Properties.from(CRYING_OBSIDIAN).func_235861_h_().notSolid()));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_DOOR_ITEM = ITEMS.register("crying_obsidian_door", () -> new TallBlockItem(CRYING_OBSIDIAN_DOOR.get(),
-            new Item.Properties().group(ItemGroups.CRYING_OBSIDIAN_VARIANTS_TAB)));
+            new Item.Properties().group(ItemGroups.getFromBlock(CRYING_OBSIDIAN))));
 
     // Pressure Plates
     public static final RegistryObject<Block> OBSIDIAN_PRESSURE_PLATE = BLOCKS.register("obsidian_pressure_plate",

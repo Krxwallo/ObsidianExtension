@@ -11,15 +11,21 @@ public class Config {
     public static class Common {
 
         public final ForgeConfigSpec.BooleanValue enableArmor;
+        public final ForgeConfigSpec.BooleanValue enableTools;
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.comment("Obsidian Extension Mod Configurations")
                    .push(Reference.MOD_ID);
 
             enableArmor = builder
-                    .comment("Enable obsidian and crying obsidian armor? (default: true)")
+                    .comment("Enable obsidian armor? (default: true)")
                     .worldRestart()
                     .define("enable_armor", true);
+
+            enableTools = builder
+                    .comment("Enable obsidian tools? (default: true)")
+                    .worldRestart()
+                    .define("enable_tools", true);
 
             builder.pop();
         }

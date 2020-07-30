@@ -3,10 +3,12 @@ package com.justAm0dd3r.obsidian_extension.events;
 import com.justAm0dd3r.obsidian_extension.registry.types.Items;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectInstance;
 import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
@@ -52,6 +54,22 @@ public class Events {
                     }
                 }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public void onItemPickupEvent(PlayerEvent.ItemPickupEvent event) {
+        LOGGER.debug("onItemPickupEvent called.");
+
+        if (event.getStack().getItem().equals(Items.OBSIDIAN_AXE.get())
+                || event.getStack().getItem().equals(Items.OBSIDIAN_PICKAXE.get())
+                || event.getStack().getItem().equals(Items.OBSIDIAN_SWORD.get())
+                || event.getStack().getItem().equals(Items.OBSIDIAN_SHOVEL.get())
+                || event.getStack().getItem().equals(Items.OBSIDIAN_HOE.get())) {
+            CompoundNBT unbreakable = new CompoundNBT();
+            unbreakable.putBoolean("Unbreakable", true);
+
+            event.getStack().getItem().updateItemStackNBT(unbreakable);
         }
     }
 }
