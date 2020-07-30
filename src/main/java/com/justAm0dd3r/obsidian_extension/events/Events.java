@@ -1,75 +1,17 @@
 package com.justAm0dd3r.obsidian_extension.events;
 
 import com.justAm0dd3r.obsidian_extension.registry.types.Items;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.EffectInstance;
-import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraft.item.Item;
+import net.minecraftforge.event.entity.player.UseHoeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 @Mod.EventBusSubscriber
 public class Events {
-    private static final Logger LOGGER = LogManager.getLogger();
-
     @SubscribeEvent
-    public static void onEntityPickupEvent(EntityItemPickupEvent event) {
-        LOGGER.debug("onEntityPickupEvent called.");
-    }
-
-    @SubscribeEvent
-    public static void enchantSaturationFunction(LivingEquipmentChangeEvent event) {
-        LOGGER.debug("enchantSaturationFunction() called.");
-
-        EquipmentSlotType slotChanged = event.getSlot();
-        if (slotChanged.getSlotIndex() > 0 && slotChanged.getSlotIndex() < 5) {
-            ItemStack previousArmorPiece = event.getFrom();
-            ItemStack newArmorPiece = event.getTo();
-
-            if (previousArmorPiece != newArmorPiece) {
-                if (newArmorPiece.getItem() == Items.OBSIDIAN_CHESTPLATE.get() || newArmorPiece.getItem() == Items.OBSIDIAN_BOOTS.get() || newArmorPiece.getItem() == Items.OBSIDIAN_LEGGINGS.get() || newArmorPiece.getItem() == Items.OBSIDIAN_HELMET.get()) {
-                    // Give the player an infinite slowness effect because he has at least one piece of obsidian armor.
-                    //noinspection ConstantConditions // Effect.get(2) will always return nonnull (Slowness)
-                    event.getEntityLiving().addPotionEffect(new EffectInstance(Effect.get(2), 1000000));
-                }
-
-                else {
-                    int noObsidianArmor = 0;
-                    for (ItemStack armor : event.getEntityLiving().getArmorInventoryList()) {
-                        if (armor.getItem() != Items.OBSIDIAN_CHESTPLATE.get() && armor.getItem() != Items.OBSIDIAN_BOOTS.get() &&
-                                armor.getItem() != Items.OBSIDIAN_LEGGINGS.get() && armor.getItem() != Items.OBSIDIAN_HELMET.get()) {
-                            noObsidianArmor++;
-                        }
-                    }
-                    if (noObsidianArmor == 4) {
-                        // The player has no obsidian armor anymore. Remove the slowness and knockback resistance
-                        //noinspection ConstantConditions // Effect.get(2) will always return nonnull (Slowness)
-                        event.getEntityLiving().removePotionEffect(Effect.get(2));
-                    }
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public void onItemPickupEvent(PlayerEvent.ItemPickupEvent event) {
-        LOGGER.debug("onItemPickupEvent called.");
-
-        if (event.getStack().getItem().equals(Items.OBSIDIAN_AXE.get())
-                || event.getStack().getItem().equals(Items.OBSIDIAN_PICKAXE.get())
-                || event.getStack().getItem().equals(Items.OBSIDIAN_SWORD.get())
-                || event.getStack().getItem().equals(Items.OBSIDIAN_SHOVEL.get())
-                || event.getStack().getItem().equals(Items.OBSIDIAN_HOE.get())) {
-            CompoundNBT unbreakable = new CompoundNBT();
-            unbreakable.putBoolean("Unbreakable", true);
-
-            event.getStack().getItem().updateItemStackNBT(unbreakable);
-        }
+    public void onHoeUse(UseHoeEvent event) {
+        Item item = event.getPlayer().getHeldItem(event.getContext().getHand()).getItem();
+        if (item.equals(Items.OBSIDIAN_HOE.get())) event.setResult(Event.Result.DENY);
     }
 }

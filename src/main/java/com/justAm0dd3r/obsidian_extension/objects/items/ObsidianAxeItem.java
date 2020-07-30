@@ -1,11 +1,11 @@
 package com.justAm0dd3r.obsidian_extension.objects.items;
 
-import com.justAm0dd3r.obsidian_extension.objects.NBT;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
@@ -16,8 +16,12 @@ public class ObsidianAxeItem extends AxeItem {
     }
 
     @Override
-    public void onCreated(@Nonnull ItemStack stack, @Nonnull World worldIn, @Nonnull PlayerEntity playerIn) {
-        stack.getItem().updateItemStackNBT(NBT.unbreakable);
-        super.onCreated(stack, worldIn, playerIn);
+    public boolean onBlockDestroyed(@Nonnull ItemStack stack, @Nonnull World worldIn, @Nonnull BlockState state, @Nonnull BlockPos pos, @Nonnull LivingEntity entityLiving) {
+        return true;
+    }
+
+    @Override
+    public boolean hitEntity(@Nonnull ItemStack stack, @Nonnull LivingEntity target, @Nonnull LivingEntity attacker) {
+        return true;
     }
 }

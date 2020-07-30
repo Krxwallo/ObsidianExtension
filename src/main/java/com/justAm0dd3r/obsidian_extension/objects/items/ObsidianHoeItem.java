@@ -1,24 +1,33 @@
 package com.justAm0dd3r.obsidian_extension.objects.items;
 
 import com.justAm0dd3r.obsidian_extension.objects.NBT;
+import net.minecraft.block.BlockState;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ShovelItem;
+import net.minecraft.item.*;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
 
 public class ObsidianHoeItem extends HoeItem {
-
     public ObsidianHoeItem(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties p_i48460_4_) {
         super(tier, attackDamageIn, attackSpeedIn, p_i48460_4_);
     }
 
     @Override
-    public void onCreated(@Nonnull ItemStack stack, @Nonnull World worldIn, @Nonnull PlayerEntity playerIn) {
-        stack.getItem().updateItemStackNBT(NBT.unbreakable);
-        super.onCreated(stack, worldIn, playerIn);
+    public boolean onBlockDestroyed(@Nonnull ItemStack stack, @Nonnull World worldIn, @Nonnull BlockState state, @Nonnull BlockPos pos, @Nonnull LivingEntity entityLiving) {
+        return true;
+    }
+
+    @Override
+    public ActionResultType onItemUse(ItemUseContext context) {
+        return super.onItemUse(context);
+    }
+
+    @Override
+    public boolean hitEntity(@Nonnull ItemStack stack, @Nonnull LivingEntity target, @Nonnull LivingEntity attacker) {
+        return true;
     }
 }

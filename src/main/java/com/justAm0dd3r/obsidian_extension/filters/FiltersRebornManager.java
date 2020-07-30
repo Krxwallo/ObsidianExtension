@@ -18,7 +18,6 @@ public class FiltersRebornManager {
     public static void addFiltersWhenLoaded() {
         if (ModList.get().isLoaded("filters")) {
             // Filters Reborn Mod is loaded -> add the filters.
-            LOGGER.debug("Filters Mod is loaded!");
             addFilters();
         }
     }
