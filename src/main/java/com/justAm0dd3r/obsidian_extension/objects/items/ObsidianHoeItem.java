@@ -22,8 +22,8 @@ public class ObsidianHoeItem extends HoeItem {
     }
 
     @Override
-    public ActionResultType onItemUse(ItemUseContext context) {
-        return super.onItemUse(context);
+    public boolean isDamageable() {
+        return false;
     }
 
     @Override
