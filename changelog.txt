@@ -1,3 +1,8 @@
+Build 2020-08-04 12:18 obsidian_extension-1.16.1-1.6.2
+======================================================
+- Fixed obsidian hoe sometimes getting damaged by 1.
+
+
 Build 2020-08-04 12:03 obsidian_extension-1.16.1-1.6.1
 ======================================================
 - Fixed obsidian tools recipes.
