@@ -1,3 +1,8 @@
+Build 2020-08-04 12:03 obsidian_extension-1.16.1-1.6.1
+======================================================
+- Fixed obsidian tools recipes.
+
+
 Build 2020-07-31 15:03 obsidian_extension-1.16.1-1.6.0
 ======================================================
 - Added obsidian tools
