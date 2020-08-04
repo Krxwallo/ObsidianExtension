@@ -4,7 +4,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ShovelItem;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -23,5 +25,13 @@ public class ObsidianShovelItem extends ShovelItem {
     @Override
     public boolean hitEntity(@Nonnull ItemStack stack, @Nonnull LivingEntity target, @Nonnull LivingEntity attacker) {
         return true;
+    }
+
+    @Nonnull
+    @Override
+    public ActionResultType onItemUse(@Nonnull ItemUseContext context) {
+        ActionResultType result = super.onItemUse(context);
+        setDamage(context.getItem(), 0);
+        return result;
     }
 }
