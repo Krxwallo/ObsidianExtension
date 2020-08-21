@@ -12,10 +12,10 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.6.2'
+version = '1.6.3'
 group = 'com.justAm0dd3r.obsidian_extension' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 //noinspection GroovyUnusedAssignment
-archivesBaseName = 'obsidian_extension-1.16.1'
+archivesBaseName = 'obsidian_extension-1.16'
 
 //noinspection GroovyUnusedAssignment
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
@@ -105,10 +105,10 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.1-32.0.47'
-    runtimeOnly fg.deobf("mezz.jei:jei-1.16.1:7.0.0.6")
-    compile fg.deobf("justAm0dd3r.filters-reborn:filters_reborn-1.16.1:1.0.0")
-    compile fg.deobf("justAm0dd3r.cheat-mode:cheat_mode-1.16.1:1.1.0")
+    minecraft 'net.minecraftforge:forge:1.16.2-33.0.10'
+    //runtimeOnly fg.deobf("mezz.jei:jei-1.16.2:7.1.0.11")
+    compileOnly fg.deobf("justAm0dd3r.filters-reborn:filters_reborn-1.16.1:1.0.0")
+    compileOnly fg.deobf("justAm0dd3r.cheat-mode:cheat_mode-1.16.1:1.1.0")
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

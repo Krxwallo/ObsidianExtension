@@ -6,10 +6,13 @@ import com.justAm0dd3r.obsidian_extension.objects.item_groups.ItemGroups;
 import com.justAm0dd3r.obsidian_extension.objects.item_tiers.ItemTiers;
 import com.justAm0dd3r.obsidian_extension.objects.items.*;
 import com.justAm0dd3r.obsidian_extension.reference.Reference;
+import net.minecraft.entity.item.BoatEntity;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.BoatItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.moddiscovery.ModAnnotation;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -73,5 +76,10 @@ public class Items {
                     ItemTiers.OBSIDIAN_ITEM_TIER, 1.5F, -3.0F,
                     new Item.Properties().group(ItemGroups.getFromBlock(OBSIDIAN))));
         }
+    }
+
+    public static RegistryObject<Item> OBSIDIAN_BOAT = null;
+    static {
+        //OBSIDIAN_BOAT = ITEMS.register("obsidian_boat", () -> new BoatItem(BoatEntity.Type.OAK, new Item.Properties().maxStackSize(1).group(ItemGroups.getFromBlock(OBSIDIAN))));
     }
 }

@@ -1,16 +1,17 @@
 modLoader="javafml"
 loaderVersion="[32,)"
+license="GPLv3"
 issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/obsidian_extension/issues"
 [[mods]]
     modId="obsidian_extension"
     version="${file.jarVersion}"
     displayName="Obsidian Extension"
-    #updateJSONURL="http://myurl.me/" #optional
+    #updateJSONURL=""
     displayURL="https://www.curseforge.com/minecraft/mc-mods/obsidian_extension"
     logoFile="obsidian_extension.png" #optional
     #credits="Thanks for this example mod goes to Java" #optional
     authors="justAm0dd3r"
-    description='''This mod adds (crying) obsidian stairs, slabs, walls, ...'''
+    description='''This mod adds (crying) obsidian stairs, slabs, walls, doors and much more.'''
 
 [[dependencies.obsidian_extension]]
     modId="forge"
@@ -22,6 +23,6 @@ issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/obsidian_extension
 [[dependencies.obsidian_extension]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.1]"
+    versionRange="[1.16,1.17)"
     ordering="NONE"
     side="BOTH"
