@@ -11,6 +11,13 @@
 
 Adds (crying) obsidian variants like stairs, slabs, buttons, pressure plates, armor, tools and more.
 
+### Crafting (Examples):
+![Crying Obsidian Button](https://lookonthebrightsi.de/mc-mods/obsidian-extension/images/recipes/crying_obsidian_button.png)
+![Crying Obsidian Door](https://lookonthebrightsi.de/mc-mods/obsidian-extension/images/recipes/crying_obsidian_door.png)
+![Crying Obsidian Pressure Plate](https://lookonthebrightsi.de/mc-mods/obsidian-extension/images/recipes/crying_obsidian_pressure_plate.png)
+![Crying Obsidian Slab](https://lookonthebrightsi.de/mc-mods/obsidian-extension/images/recipes/crying_obsidian_slab.png)
+![Obsidian Helmet](https://lookonthebrightsi.de/mc-mods/obsidian-extension/images/recipes/obsidian_helmet.png)
+
 ### Screenshots:
 
 ![Screenshot 1](https://lookonthebrightsi.de/mc-mods/obsidian-extension/images/screenshot-1-edited.png)
