@@ -1,4 +1,4 @@
-[![ObsidianExtension Banner](https://lookonthebrightsi.de/mc-mods/obsidian-extension/images/obsidian-extension-banner.png)](https://github.com/Krxwallo/ObsidianExtension)
+[![ObsidianExtension Banner](https://mc.lookonthebrightsi.de/obsidian-extension/images/obsidian-extension-banner.png)](https://github.com/Krxwallo/ObsidianExtension)
 
 [![Curseforge](http://cf.way2muchnoise.eu/title/obsidian-extension.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/obsidian-extension)
 [![Downloads](http://cf.way2muchnoise.eu/obsidian-extension.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/obsidian-extension/download)
