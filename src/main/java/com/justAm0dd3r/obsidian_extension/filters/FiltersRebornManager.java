@@ -1,14 +1,9 @@
 package com.justAm0dd3r.obsidian_extension.filters;
 
-import com.justAm0dd3r.obsidian_extension.objects.item_groups.ItemGroups;
-import com.justAm0dd3r.obsidian_extension.reference.Reference;
 import com.justAm0dd3r.obsidian_extension.registry.types.Blocks;
 import com.justAm0dd3r.obsidian_extension.registry.types.Items;
-import com.mrcrayfish.filters.Filters;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.ModList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -39,10 +34,10 @@ public class FiltersRebornManager {
     }
 
     private static void addFilter(String tagName, Item item) {
-        Filters.get().register(ItemGroups.OBSIDIAN_EXTENSION_TAB, new ResourceLocation(Reference.MOD_ID,"obsidian_extension_tab/" + tagName), new ItemStack(item));
+        //Filters.get().register(Tabs.OBSIDIAN_EXTENSION_TAB, new ResourceLocation(Reference.MOD_ID,"obsidian_extension_tab/" + tagName), new ItemStack(item));
     }
 
     private static void addFilter(String tagName, Block block) {
-        Filters.get().register(ItemGroups.OBSIDIAN_EXTENSION_TAB, new ResourceLocation(Reference.MOD_ID,"obsidian_extension_tab/" + tagName), new ItemStack(block));
+        //Filters.get().register(Tabs.OBSIDIAN_EXTENSION_TAB, new ResourceLocation(Reference.MOD_ID,"obsidian_extension_tab/" + tagName), new ItemStack(block));
     }
 }

@@ -1,17 +1,16 @@
-package com.justAm0dd3r.obsidian_extension.objects.item_groups;
+package com.justAm0dd3r.obsidian_extension.objects.tabs;
 
-import com.justAm0dd3r.obsidian_extension.ObsidianExtension;
 import com.justAm0dd3r.obsidian_extension.filters.FiltersRebornManager;
-import com.justAm0dd3r.obsidian_extension.objects.item_groups.groups.CryingObsidianStuffTab;
-import com.justAm0dd3r.obsidian_extension.objects.item_groups.groups.ObsidianExtensionTab;
-import com.justAm0dd3r.obsidian_extension.objects.item_groups.groups.ObsidianStuffTab;
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemGroup;
+import com.justAm0dd3r.obsidian_extension.objects.tabs.groups.CryingObsidianStuffTab;
+import com.justAm0dd3r.obsidian_extension.objects.tabs.groups.ObsidianExtensionTab;
+import com.justAm0dd3r.obsidian_extension.objects.tabs.groups.ObsidianStuffTab;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.level.block.Block;
 
 /**
  * Author: justAm0dd3r
  */
-public class ItemGroups {
+public class Tabs {
     public static ObsidianStuffTab OBSIDIAN_STUFF_TAB = null;
     public static CryingObsidianStuffTab CRYING_OBSIDIAN_STUFF_TAB = null;
     public static ObsidianExtensionTab OBSIDIAN_EXTENSION_TAB = null;
@@ -28,9 +27,9 @@ public class ItemGroups {
         }
     }
 
-    public static ItemGroup getFromBlock(Block block) {
+    public static CreativeModeTab getFromBlock(Block block) {
         if (!FiltersRebornManager.isFiltersLoaded()) {
-            String key = block.getTranslationKey();
+            String key = block.getDescriptionId();
 
             if (key.contains("crying_obsidian")) return CRYING_OBSIDIAN_STUFF_TAB;
             else return OBSIDIAN_STUFF_TAB;

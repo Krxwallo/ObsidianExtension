@@ -1,22 +1,22 @@
-package com.justAm0dd3r.obsidian_extension.objects.item_groups.groups;
+package com.justAm0dd3r.obsidian_extension.objects.tabs.groups;
 
 import com.justAm0dd3r.obsidian_extension.registry.types.Blocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 import javax.annotation.Nonnull;
 
 /**
  * Author: justAm0dd3r
  */
-public class ObsidianExtensionTab extends ItemGroup {
+public class ObsidianExtensionTab extends CreativeModeTab {
     public ObsidianExtensionTab() {
         super("obsidian_extension");
     }
 
     @Nonnull
     @Override
-    public ItemStack createIcon() {
+    public ItemStack makeIcon() {
         return new ItemStack(Blocks.CRYING_OBSIDIAN_STAIRS.get());
     }
 }

@@ -1,40 +1,40 @@
 package com.justAm0dd3r.obsidian_extension.objects.item_tiers.tiers;
 
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import javax.annotation.Nonnull;
 
-public class ObsidianItemTier implements IItemTier {
+public class ObsidianItemTier implements Tier {
     @Override
-    public int getMaxUses() {
+    public int getUses() {
         return 131; // Iron, but it doesn't matter...
     }
 
     @Override
-    public float getEfficiency() {
+    public float getSpeed() {
         return 6.0F; // Iron
     }
 
     @Override
-    public float getAttackDamage() {
+    public float getAttackDamageBonus() {
         return 2.0F; // Iron
     }
 
     @Override
-    public int getHarvestLevel() {
+    public int getLevel() {
         return 3; // Diamond
     }
 
     @Override
-    public int getEnchantability() {
+    public int getEnchantmentValue() {
         return 5; // Stone
     }
 
     @Nonnull
     @Override
-    public Ingredient getRepairMaterial() {
-        return Ingredient.fromItems(Items.OBSIDIAN); // Obsidian
+    public Ingredient getRepairIngredient() {
+        return Ingredient.of(Items.OBSIDIAN); // Obsidian
     }
 }
