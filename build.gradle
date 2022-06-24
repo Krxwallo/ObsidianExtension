@@ -27,7 +27,7 @@ minecraft {
     // stable_#            Stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'official', version: '1.18.2'
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
@@ -104,10 +104,10 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.79'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
     //runtimeOnly fg.deobf("mezz.jei:jei-1.16.2:7.1.0.11")
     compileOnly fg.deobf("curse.maven:fm-397288:3026863")
-    compileOnly fg.deobf("curse.maven:cm-398168:3172702")
+    runtimeOnly fg.deobf("curse.maven:cm-398168:3846388")
 }
 
 // Example configuration to allow publishing using the maven-publish task
