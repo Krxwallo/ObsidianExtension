@@ -1,11 +1,13 @@
 package com.justAm0dd3r.obsidian_extension.objects.items;
 
+import com.justAm0dd3r.obsidian_extension.objects.item_tiers.ItemTiers;
+import com.justAm0dd3r.obsidian_extension.objects.tabs.Tabs;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShovelItem;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -13,10 +15,12 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nonnull;
 
+import static net.minecraft.world.level.block.Blocks.OBSIDIAN;
+
 public class ObsidianShovelItem extends ShovelItem {
 
-    public ObsidianShovelItem(Tier tier, float attackDamage, float attackSpeed, Properties properties) {
-        super(tier, attackDamage, attackSpeed, properties);
+    public ObsidianShovelItem(float attackDamage, float attackSpeed) {
+        super(ItemTiers.OBSIDIAN_ITEM_TIER, attackDamage, attackSpeed, new Item.Properties().tab(Tabs.getFromBlock(OBSIDIAN)));
     }
 
     @Override public boolean mineBlock(@NotNull ItemStack stack, @NotNull Level world, @NotNull BlockState state, @NotNull BlockPos pos, @NotNull LivingEntity entity)  { return true; }

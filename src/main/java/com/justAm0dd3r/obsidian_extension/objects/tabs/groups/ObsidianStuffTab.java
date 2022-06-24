@@ -17,6 +17,6 @@ public class ObsidianStuffTab extends CreativeModeTab {
     @Nonnull
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(Blocks.OBSIDIAN_STAIRS.get());
+        return new ItemStack(Blocks.blocks.get("obsidian_stairs").get());
     }
 }

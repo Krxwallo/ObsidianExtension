@@ -1,13 +1,12 @@
 package com.justAm0dd3r.obsidian_extension.filters;
 
-import com.justAm0dd3r.obsidian_extension.registry.types.Blocks;
-import com.justAm0dd3r.obsidian_extension.registry.types.Items;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.fml.ModList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+// TODO filters reborn support
 public class FiltersRebornManager {
     private static final Logger LOGGER = LogManager.getLogger();
     public static void addFiltersWhenLoaded() {
@@ -23,14 +22,14 @@ public class FiltersRebornManager {
     }
 
     private static void addFilters() {
-        addFilter("armor", Items.OBSIDIAN_CHESTPLATE.get());
+/*        addFilter("armor", Items.OBSIDIAN_CHESTPLATE.get());
         addFilter("buttons", Blocks.OBSIDIAN_BUTTON.get());
         addFilter("doors", Blocks.OBSIDIAN_DOOR.get());
         addFilter("pressure_plates", Blocks.OBSIDIAN_PRESSURE_PLATE.get());
         addFilter("slabs", Blocks.OBSIDIAN_SLAB.get());
         addFilter("stairs", Blocks.OBSIDIAN_STAIRS.get());
         addFilter("tools", Items.OBSIDIAN_PICKAXE.get());
-        addFilter("walls", Blocks.OBSIDIAN_WALL.get());
+        addFilter("walls", Blocks.OBSIDIAN_WALL.get());*/
     }
 
     private static void addFilter(String tagName, Item item) {

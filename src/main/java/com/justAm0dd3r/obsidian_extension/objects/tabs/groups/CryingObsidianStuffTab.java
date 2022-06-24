@@ -17,6 +17,6 @@ public class CryingObsidianStuffTab extends CreativeModeTab {
     @Nonnull
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(Blocks.CRYING_OBSIDIAN_STAIRS.get());
+        return new ItemStack(Blocks.blocks.get("crying_obsidian_stairs").get());
     }
 }
