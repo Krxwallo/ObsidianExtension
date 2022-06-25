@@ -34,11 +34,11 @@ public class Blocks {
     public static HashMap<String, RegistryObject<Block>> blocks = new HashMap<>();
 
     private static BlockBehaviour.Properties obsidianProperties() {
-        return BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE);
+        return BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).requiresCorrectToolForDrops().strength(40F, 1200.0F);
     }
 
     private static void registerBlocksFor(String name, Block block) {
-        var properties = obsidianProperties()/*.requiresCorrectToolForDrops()*/.strength(2.0F, 1200.0F);
+        var properties = obsidianProperties();
         // Blocks
         String slabName = name + "_slab";
         String stairsName = name + "_stairs";
@@ -48,8 +48,9 @@ public class Blocks {
         RegistryObject<Block> slab = BLOCKS.register(slabName, () -> new SlabBlock(properties));
         RegistryObject<Block> stairs = BLOCKS.register(stairsName, () -> new StairBlock(block::defaultBlockState, properties));
         RegistryObject<Block> wall = BLOCKS.register(wallName, () -> new WallBlock(properties));
-        RegistryObject<Block> door = BLOCKS.register(doorName, () -> new DoorBlock(BlockBehaviour.Properties.copy(block).dynamicShape().strength(2.0F, 1200.0F)));
-        RegistryObject<Block> pressurePlate = BLOCKS.register(pressurePlateName, () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, obsidianProperties().strength(2.0F, 1200.0F).dynamicShape()));
+        // TODO change to only openable by redstone
+        RegistryObject<Block> door = BLOCKS.register(doorName, () -> new DoorBlock(BlockBehaviour.Properties.copy(block).dynamicShape()));
+        RegistryObject<Block> pressurePlate = BLOCKS.register(pressurePlateName, () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, obsidianProperties().dynamicShape()));
 
         blocks.put(slabName, slab);
         blocks.put(stairsName, stairs);
@@ -65,7 +66,7 @@ public class Blocks {
         ITEMS.register(pressurePlateName, () -> new BlockItemBase(pressurePlate.get()));
 
         // Button
-        BlockBehaviour.Properties buttonProperties = BlockBehaviour.Properties.copy(block).noCollission().strength(0.5F);
+        BlockBehaviour.Properties buttonProperties = BlockBehaviour.Properties.copy(block).noCollission().strength(20F);
         String buttonName = name + "_button";
         RegistryObject<Block> button = BLOCKS.register(buttonName, () -> new StoneButtonBlock(buttonProperties));
         ITEMS.register(buttonName, () -> new BlockItemBase(button.get()));
