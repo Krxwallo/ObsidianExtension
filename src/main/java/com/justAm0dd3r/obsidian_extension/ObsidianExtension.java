@@ -37,6 +37,6 @@ public class ObsidianExtension
     public void onGatherData(GatherDataEvent event) {
         LOGGER.info("Gather Data Event");
         var generator = event.getGenerator();
-        generator.addProvider(new BlockTagGen(generator, event.getExistingFileHelper()));
+        generator.addProvider(event.includeServer(), new BlockTagGen(generator, event.getExistingFileHelper()));
     }
 }

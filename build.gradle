@@ -12,7 +12,7 @@ apply plugin: 'maven-publish'
 
 version = '1.6.5'
 group = 'com.justAm0dd3r.obsidian_extension' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'obsidian_extension-1.18.X'
+archivesBaseName = 'obsidian_extension-1.19.X'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -21,7 +21,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 minecraft {
 
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'official', version: '1.19'
 
     runs {
         client {
@@ -80,10 +80,10 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
+    minecraft 'net.minecraftforge:forge:1.19-41.0.45'
     //runtimeOnly fg.deobf("mezz.jei:jei-1.16.2:7.1.0.11")
-    compileOnly fg.deobf("curse.maven:fm-397288:3026863")
-    runtimeOnly fg.deobf("curse.maven:cm-398168:3846388")
+    compileOnly fg.deobf("curse.maven:fm-397288:3026863") // Filters Reborn
+    runtimeOnly fg.deobf("curse.maven:cm-398168:3846435") // Cheat Mode
 }
 
 
