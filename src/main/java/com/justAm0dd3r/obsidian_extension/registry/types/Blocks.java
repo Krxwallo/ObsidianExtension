@@ -1,6 +1,7 @@
 package com.justAm0dd3r.obsidian_extension.registry.types;
 
 import com.justAm0dd3r.obsidian_extension.objects.block_items.BlockItemBase;
+import com.justAm0dd3r.obsidian_extension.objects.blocks.ObsidianDoorBlock;
 import com.justAm0dd3r.obsidian_extension.objects.tabs.Tabs;
 import com.justAm0dd3r.obsidian_extension.reference.Reference;
 import net.minecraft.world.item.DoubleHighBlockItem;
@@ -48,8 +49,7 @@ public class Blocks {
         RegistryObject<Block> slab = BLOCKS.register(slabName, () -> new SlabBlock(properties));
         RegistryObject<Block> stairs = BLOCKS.register(stairsName, () -> new StairBlock(block::defaultBlockState, properties));
         RegistryObject<Block> wall = BLOCKS.register(wallName, () -> new WallBlock(properties));
-        // TODO change to only openable by redstone
-        RegistryObject<Block> door = BLOCKS.register(doorName, () -> new DoorBlock(BlockBehaviour.Properties.copy(block).dynamicShape()));
+        RegistryObject<Block> door = BLOCKS.register(doorName, () -> new ObsidianDoorBlock(BlockBehaviour.Properties.copy(block).dynamicShape()));
         RegistryObject<Block> pressurePlate = BLOCKS.register(pressurePlateName, () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, obsidianProperties().dynamicShape()));
 
         blocks.put(slabName, slab);
