@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 
-version = '1.6.4'
+version = '1.6.5'
 group = 'com.justAm0dd3r.obsidian_extension' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'obsidian_extension-1.18.X'
 
